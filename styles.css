@@ -150,6 +150,16 @@ button {
     border: 1px solid #fff;
     cursor: pointer;
 }
+section {
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+    color: dodgerblue;
+}
+section:nth-child(3) {
+    background-color: #f1f5f8;
+}
 @media (max-width: 728px) {
     html {
         font-size: 10px;
