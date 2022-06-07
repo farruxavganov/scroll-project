@@ -45,6 +45,17 @@ button {
     height: auto;
     background-color: transparent;
 }
+.active {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 5px 4px #333;
+}
+.active .navbar__link {
+    color: #333;
+}
 .navbar__wrapper {
     display: flex;
     justify-content: space-between;
@@ -110,7 +121,39 @@ button {
 .navbar__link:hover {
     color: dodgerblue;
 }
+.home__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.home__title {
+    font-size: 2.4rem;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.home__disc {
+    font-size: .9rem;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 15px 0;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.home__btn {
+    padding: 7px 15px;
+    color: #fff;
+    text-transform: uppercase;
+    left: 1px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
 @media (max-width: 728px) {
+    html {
+        font-size: 10px;
+    }
     .navbar {
         background-color: #fff;
     }
@@ -128,11 +171,13 @@ button {
         height: 0;
         visibility: hidden;
         z-index: -10;
-        transition: height .5s ease;
     }
     .show .navbar__content {
         z-index: 1;
         visibility: visible;
+    }
+    .show .navbar {
+        box-shadow: 0 0 5px 4px #222;
     }
     .navbar__items {
         flex-direction: column;
