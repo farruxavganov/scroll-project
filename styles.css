@@ -54,6 +54,7 @@ button {
     width: 100%;
     background-color: #fff;
     box-shadow: 0 0 5px 4px #333;
+    z-index: 10;
 }
 .active .navbar__link {
     color: #333;
@@ -113,7 +114,7 @@ button {
     margin: 0;
 }
 .navbar__link {
-    transition: .5s ease;
+    transition: margin .5s ease;
     text-transform: capitalize;
     padding: 10px;
     font-size: 1.2rem;
@@ -180,7 +181,7 @@ footer {
     position: fixed;
     bottom: 15%;
     right: 5%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -230,6 +231,7 @@ footer {
     .show .navbar__content {
         z-index: 1;
         visibility: visible;
+        transition: height .5s ease;
     }
     .show .navbar {
         box-shadow: 0 0 5px 4px #222;
@@ -237,6 +239,8 @@ footer {
     .navbar__items {
         flex-direction: column;
         align-items: flex-start;
+        height: max-content;
+        transition: none;
     }
     .navbar__item {
         margin: 0;
